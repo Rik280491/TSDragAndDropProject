@@ -1,7 +1,6 @@
+import { Project, ProjectStatus } from "../models/project-model.js";
 
-
-namespace App {
-    // Project State Management
+// Project State Management
 type Listener<T> = (items: T[]) => void;
 
 // Set to protected, similar to private but inheriting classes can access it.
@@ -57,5 +56,5 @@ export class ProjectState extends State<Project> {
 	}
 }
 
+// no matter how many other files import this constant, it only runs once at first import, not every import
 export const projectState = ProjectState.getInstance();
-}

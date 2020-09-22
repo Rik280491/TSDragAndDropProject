@@ -1,5 +1,3 @@
-namespace App {
-
 // Autobind Decorator
 export function Autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
 	const originalMethod = descriptor.value;
@@ -11,6 +9,4 @@ export function Autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
 		},
 	};
 	return adjDescriptor;
-}
-
 }

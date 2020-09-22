@@ -1,6 +1,3 @@
-namespace App {
-
-
 // Validation see gatherUserInput fn
 // question mark means its optional - boolean | undefined
 export interface Validatable {
@@ -44,5 +41,4 @@ export function validate(validatableInput: Validatable) {
 		isValid = isValid && validatableInput.value <= validatableInput.max;
 	}
 	return isValid;
-}
 }
